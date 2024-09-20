@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Graph</title>
+    <style>
+        #container {
+            height: 450px;
+            min-width: 300px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Highcharts scripts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <div id="container"></div>
+
+    <script th:inline="javascript">
+        // Safely injecting Thymeleaf variables into JavaScript
+        const title = /*[[${title}]]*/ 'Default Title';
+        const subtitle = /*[[${subtitle}]]*/ 'Default Subtitle';
+        const xAxis = /*[[${xAxis}]]*/ 'X Axis Label';
+        const yAxis = /*[[${yAxis}]]*/ 'Y Axis Label';
+        const categories = /*[[${categories}]]*/ [];
+        const values = /*[[${values}]]*/ [];
+
+        // Ensure Thymeleaf passed data properly (Debugging)
+        console.log("Categories from Thymeleaf:", categories);
+        console.log("Values from Thymeleaf:", values);
+
+        // Highcharts configuration
+        Highcharts.chart('container', {
+            title: {
+                text: title  // Injected title
+            },
+            subtitle: {
+                text: subtitle  // Injected subtitle
+            },
+            xAxis: {
+                categories: categories  // Injected categories array
+            },
+            yAxis: {
+                title: {
+                    text: yAxis  // Injected y-axis label
+                }
+            },
+            series: [{
+                data: values.map(value => parseFloat(value)),  // Injected values array, ensuring they are numeric
+                type: 'column',
+                name: xAxis  // Use xAxis as the series name
+            }]
+        });
+    </script>
+</body>
+</html>
