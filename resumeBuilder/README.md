@@ -1,6 +1,6 @@
-#ResumeBuilder
+# ResumeBuilder
 
-##About Project
+## About Project
 In this resume builder we take input form user and convert into latex code and by pasting it on overleaf user will get a ATS friendly resume.At current we have only one template but in future we add more templates.
 
 ## Screenshot
