@@ -1,3 +1,6 @@
+
+
+
 # 📝 Resume Builder (Spring Boot + Thymeleaf)
 
 This is a web-based **Resume Builder** application developed using **Spring Boot** and **Thymeleaf**. It allows users to input their personal, educational, and professional details and dynamically generate a professional resume in LaTeX format.
@@ -47,4 +50,58 @@ This is a web-based **Resume Builder** application developed using **Spring Boot
    ```bash
    git clone https://github.com/Rahul230501/springbootProj.git
    cd resumeBuilder
+2. **Set up the database**
 
+    Create a MySQL database (e.g., resume_db)
+
+    Update application.properties with your DB credentials
+
+3. **Build and run the project**
+    ``` bash
+    mvn spring-boot:run
+
+
+4. **Access the app**
+    
+ Open http://localhost:8080 in your browser
+
+
+## ✅ Functional Modules
+
+   - User login & registration.
+
+   - Resume form input (Name, Education, Skills, Projects, etc.).
+
+   - Resume preview LaTeX code.
+
+
+## 📂 Folder Structure
+
+```css
+resumeBuilder/
+├── src/
+│   └── main/
+│       ├── java/
+│       ├── resources/
+│       │   ├── templates/
+│       │   └── static/
+├── pom.xml
+└── application.properties
+
+```
+
+## 🙌 Acknowledgements
+
+- Spring Boot Documentation
+
+- LaTeX Resume Templates
+
+- Bootstrap for styling
+
+
+## 📬 Contact
+**Rahul Kumar**
+- 📧 rahulkumar.230501@gmail.com
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rahul-soni-java/)
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://rahul230501.github.io/MyPortfolio/)
