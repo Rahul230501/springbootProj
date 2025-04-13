@@ -13,7 +13,7 @@ This repository contains backend projects built using **Spring Boot**, focusing 
 - Users enter personal, educational, and experience details  
 - Resume is generated using **LaTeX templates**  
 - Technologies: Spring Boot, Thymeleaf, MySQL, HTML/CSS, JavaScript  
-- Features: Secure login, PDF export, clean UI  
+- Features: Secure login,  clean UI  
 - 📄 [Live README](https://github.com/Rahul230501/springbootProj/tree/main/resumeBuilder)
 
 ---
@@ -22,9 +22,7 @@ This repository contains backend projects built using **Spring Boot**, focusing 
 📂 [`chatroomapp`](https://github.com/Rahul230501/springbootProj/tree/main/chatroomapp)
 
 - Real-time group messaging using **WebSockets**  
-- Handles 100+ users with minimal message lag  
-- Technologies: Spring Boot, WebSocket, STOMP, JavaScript  
-- Features: Instant messaging, user authentication, multiple chatrooms  
+- Technologies: Spring Boot, WebSocket, JavaScript  
 - 📄 [Live README](https://github.com/Rahul230501/springbootProj/tree/main/chatroomapp)
 
 ---
