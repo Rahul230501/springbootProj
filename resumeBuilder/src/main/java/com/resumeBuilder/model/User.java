@@ -1,12 +1,13 @@
 package com.resumeBuilder.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
 public class User {
     
     @Id
@@ -42,7 +43,10 @@ public class User {
     
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Skill skill;
-    
+
+    public User() {
+    }
+
     public void addEducation(Education edu) {
         education.add(edu);
     }
@@ -54,6 +58,10 @@ public class User {
     public void addProject(Project proj) {
         projects.add(proj);
     }
-    
-    
+
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof User;
+    }
+
 }
